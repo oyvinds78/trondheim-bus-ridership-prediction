@@ -1,0 +1,54 @@
+{
+    "rbk_home_games": [
+        {"name": "RBK Home Game 1", "start": "2024-04-01", "end": "2024-04-01", "start_time": "16:00", "end_time": "20:00"},
+        {"name": "RBK Home Game 2", "start": "2025-04-14", "end": "2024-04-14", "start_time": "16:00", "end_time": "20:00"},
+        {"name": "RBK Home Game 3", "start": "2024-05-16", "end": "2024-05-16", "start_time": "16:00", "end_time": "21:00"},
+        {"name": "RBK Home Game 4", "start": "2025-05-26", "end": "2024-05-26", "start_time": "16:00", "end_time": "20:00"},
+        {"name": "RBK Home Game 5", "start": "2024-06-02", "end": "2024-06-02", "start_time": "18:00", "end_time": "22:00"},
+        {"name": "RBK Home Game 6", "start": "2024-07-07", "end": "2024-07-07", "start_time": "18:00", "end_time": "22:00"},
+        {"name": "RBK Home Game 7", "start": "2024-07-15", "end": "2024-07-15", "start_time": "16:00", "end_time": "20:00"}, 
+        {"name": "RBK Home Game 8", "start": "2024-08-04", "end": "2024-08-04", "start_time": "18:00", "end_time": "22:00"},
+        {"name": "RBK Home Game 9", "start": "2024-08-18", "end": "2024-08-18", "start_time": "18:00", "end_time": "22:00"},
+        {"name": "RBK Home Game 10", "start": "2024-08-21", "end": "2024-08-21", "start_time": "18:00", "end_time": "22:00"},
+        {"name": "RBK Home Game 11", "start": "2024-09-01", "end": "2024-09-01", "start_time": "16:00", "end_time": "20:00"},
+        {"name": "RBK Home Game 12", "start": "2024-09-22", "end": "2024-09-22", "start_time": "16:00", "end_time": "20:00"},
+        {"name": "RBK Home Game 13", "start": "2024-10-13", "end": "2024-10-13", "start_time": "16:00", "end_time": "20:00"},
+        {"name": "RBK Home Game 14", "start": "2024-10-20", "end": "2024-10-20", "start_time": "13:30", "end_time": "17:00"},
+        {"name": "RBK Home Game 15", "start": "2024-11-03", "end": "2024-11-03", "start_time": "18:00", "end_time": "22:00"},
+        {"name": "RBK Home Game 16", "start": "2024-11-23", "end": "2024-11-23", "start_time": "16:00", "end_time": "20:00"}
+    ],
+    "major_events": [
+        {"name": "Grunnlovsdag", "start": "2024-05-17", "end": "2024-05-17", "start_time": "08:00", "end_time": "22:00"},
+        {"name": "Trondheimrocks", "start": "2024-06-06", "end": "2024-06-07", "start_time": "15:00", "end_time": "03:00"},
+        {"name": "NEON", "start": "2024-06-07", "end": "2024-06-08", "start_time": "12:00", "end_time": "03:00"},
+        {"name": "Olavsfest/Matfestival", "start": "2024-07-28", "end": "2024-08-03"},
+        {"name": "Pstereo", "start": "2024-08-16", "end": "2024-08-18"},
+        {"name": "We love the 90s", "start": "2024-08-24", "end": "2024-08-25","start_time": "15:00", "end_time": "03:00"},
+        {"name": "Festningen", "start": "2024-08-30", "end": "2024-09-01"}
+    ],
+    "special_events": [
+        {"name": "Trondheimcalling", "start": "2024-02-01", "end": "2024-02-04", "start_time": "15:00", "end_time": "03:00"},
+        {"name": "180Conference", "start": "2024-04-09", "end": "2024-04-11"},
+        {"name": "1.Mai", "start": "2024-05-01", "end": "2024-05-01", "start_time": "10:00", "end_time": "18:00"},
+        {"name": "Trondheimjazzfestival", "start": "2024-05-07", "end": "2024-05-12"},
+        {"name": "VMfinale", "start": "2024-07-14", "end": "2024-07-14", "start_time": "18:00", "end_time": "23:59"}, 
+        {"name": "Norfishing", "start": "2024-08-20", "end": "2024-08-22"},
+        {"name": "Transform", "start": "2024-09-01", "end": "2024-09-06"},
+        {"name": "Trondheimpride", "start": "2024-09-06", "end": "2024-09-16"},
+        {"name": "Kammermusikkfestivalen", "start": "2024-09-21", "end": "2024-09-29"}
+    ],
+    "other_holidays": [
+        "2024-01-01", "2024-02-19", "2024-02-20", "2024-02-21", "2024-02-22", "2024-02-23", 
+        "2024-03-25", "2024-03-26", "2024-03-27", "2024-03-28", "2024-03-29", "2024-03-30",
+        "2024-03-31", "2024-05-01", "2024-05-09", "2024-05-17", "2024-05-19", "2024-05-20",
+        "2024-10-07", "2024-10-08", "2024-10-09", "2024-10-10", "2024-10-11", "2024-12-21", "2024-12-22",
+        "2024-12-23", "2024-12-24", "2024-12-25", "2024-12-26", "2024-12-27", "2024-12-28", 
+        "2024-12-29", "2024-12-30", "2024-12-31"
+    ],
+    "summer_holiday": {"start": "2024-06-21", "end": "2024-08-17"},
+    "e_scooter_season": {"start": "2024-03-15", "end": "2024-11-30"},
+    "student_semester": [
+        {"start": "2024-01-06", "end": "2024-06-06"},
+        {"start": "2024-08-11", "end": "2024-12-20"}
+    ]
+}
