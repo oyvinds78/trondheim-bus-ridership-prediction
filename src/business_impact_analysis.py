@@ -56,7 +56,7 @@ except Exception as e:
 try:
     print("\nMaking predictions on the engineered test set...")
     X_test = test_df_engineered[FINAL_MODEL_FEATURES]
-    predictions = final_model.predict(X_test)
+    predictions = np.expm1(final_model.predict(X_test))
 
     # Create Initial Analysis DataFrame
     analysis_df = test_df_engineered.copy()

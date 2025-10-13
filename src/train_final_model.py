@@ -1,5 +1,6 @@
 # --- 0. IMPORTS ---
 import pandas as pd
+import numpy as np
 import joblib
 import os
 import time
@@ -91,7 +92,7 @@ if not train_df.empty:
     
     # Prepare the training data
     X_train = train_df[FEATURES]
-    y_train = train_df[TARGET]
+    y_train = np.log1p(train_df[TARGET])
     
     # Start the training process
     print("Training started... This will take a significant amount of time.")

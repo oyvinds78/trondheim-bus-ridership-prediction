@@ -16,7 +16,7 @@ YEAR = 2024
 
 DATA_DIR = PROJECT_ROOT / 'Data'
 PROCESSED_DIR = DATA_DIR / 'processed'
-MODELS_DIR = PROJECT_ROOT / 'code' / 'models'
+MODELS_DIR = PROJECT_ROOT / 'models'
 
 # Create output directory if it doesn't exist
 MODELS_DIR.mkdir(exist_ok=True)

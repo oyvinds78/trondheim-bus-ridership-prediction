@@ -34,7 +34,7 @@ elif DATASET_CSV.exists():
 else:
     raise FileNotFoundError(f"No master dataset found in {PROCESSED_DIR}")
 
-print(f"✅ Dataset loaded with {df.shape[0]:,} rows and {df.shape[1]} columns")
+print(f" Dataset loaded with {df.shape[0]:,} rows and {df.shape[1]} columns")
 
 # Ensure datetime is a datetime object
 df['datetime'] = pd.to_datetime(df['datetime'])
@@ -141,5 +141,5 @@ if __name__ == '__main__':
     analyze_event_impact(df, 'is_student_semester', 'Student Semester')
     analyze_event_impact(df, 'is_summer_holiday', 'Summer Holiday')
     
-    print("\n\n✅ --- EDA ANALYSIS COMPLETE ---")
+    print("\n\n --- EDA ANALYSIS COMPLETE ---")
     print(f"All plots have been saved to: {FIGURES_OUTPUT_DIR}")

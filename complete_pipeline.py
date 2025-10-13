@@ -6,7 +6,7 @@ Date: 2025-09-21
 This script orchestrates the complete machine learning pipeline
 for bus ridership prediction in Trondheim.
 """
-
+# Import libraries
 import sys
 import time
 import logging
@@ -14,12 +14,15 @@ import subprocess
 from pathlib import Path
 from typing import List, Dict, Optional
 
+# Create logs directory if it doesn't exist
+Path('logs').mkdir(exist_ok=True)
+
 # Setup logging
 logging.basicConfig(
     level=logging.INFO, 
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('pipeline.log', encoding='utf-8'),
+        logging.FileHandler('logs/pipeline.log', encoding='utf-8'),
         logging.StreamHandler()
     ]
 )
@@ -56,7 +59,7 @@ class BusRidershipPipeline:
             'master_dataset_pkl': self.processed_dir / 'master_feature_dataset_2024.pkl',
             'advanced_features_pkl': self.processed_dir / 'master_feature_dataset_2024_with_advanced_features.pkl',
             'final_training_set': self.processed_dir / 'final_training_set_advanced.pkl',
-            'final_model': self.src_dir / 'models' / 'final_bus_ridership_model.joblib'
+            'final_model': self.project_root / 'models' / 'final_bus_ridership_model.joblib'
         }
         
     def define_pipeline(self) -> List[Dict]:

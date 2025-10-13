@@ -1,3 +1,4 @@
+# --- IMPORTS
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -41,7 +42,7 @@ num_folds = 6
 
 # --- Data Processing and Visualization ---
 
-# Convert the results into a pandas DataFrame, which is ideal for plotting
+# Convert the results into a pandas DataFrame
 try:
     results_df = pd.DataFrame(fold_results_data, columns=['Fold', 'Model', 'MAE'])
     print("Successfully created DataFrame from results.")

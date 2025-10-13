@@ -131,15 +131,20 @@ cython_debug/
 .vscode/
 
 # Data files
-Data/
+/Data/
 *.csv
 *.pkl
 *.joblib
+
+# Log files
 *.log
 
 # Reports
-reports/
+/reports/
 
 # Visualizations
-Visualizations/
+/Visualizations/
 *.png
+
+# Configuration files
+config/config.json

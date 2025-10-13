@@ -13,7 +13,7 @@ PROJECT_ROOT = Path.cwd().parent
 YEAR = 2024
 DATA_DIR = PROJECT_ROOT / 'Data'
 PROCESSED_DIR = DATA_DIR / 'processed'
-MODELS_DIR = PROJECT_ROOT / 'src' / 'models'
+MODELS_DIR = PROJECT_ROOT /  'models'
 REPORTS_DIR = PROJECT_ROOT / 'reports'
 FIGURES_OUTPUT_DIR = REPORTS_DIR / 'figures'
 
@@ -35,17 +35,17 @@ try:
     artifact = joblib.load(CHAMPION_MODEL_PATH)
     final_model = artifact['model']
     FINAL_MODEL_FEATURES = artifact['features']
-    print(f"✅ Model loaded. Expecting {len(FINAL_MODEL_FEATURES)} features.")
+    print(f" Model loaded. Expecting {len(FINAL_MODEL_FEATURES)} features.")
 
     # Load Hold-Out Test Data
     print(f"Loading PRE-ENGINEERED hold-out test data from: {HOLDOUT_TEST_PATH}")
     test_df = pd.read_pickle(HOLDOUT_TEST_PATH)
-    print(f"✅ Loaded {len(test_df):,} records for the test period.")
+    print(f" Loaded {len(test_df):,} records for the test period.")
 
     # Load Stop List for Name Mapping
     print(f"Loading stop list from: {STOP_LIST_PATH}")
     stop_list_df = pd.read_csv(STOP_LIST_PATH)
-    print(f"✅ Loaded {len(stop_list_df)} stop names.")
+    print(f" Loaded {len(stop_list_df)} stop names.")
 
 except Exception as e:
     print(f"❌ An error occurred during asset loading: {e}")
@@ -70,7 +70,7 @@ try:
     print("✅ Predictions generated and analysis DataFrame is ready.")
 
 except Exception as e:
-    print(f"❌ An error occurred during prediction: {e}")
+    print(f" An error occurred during prediction: {e}")
     exit()
 
 
@@ -144,7 +144,7 @@ if __name__ == '__main__':
         analyze_error_by_stop(analysis_df)
         analyze_residuals(analysis_df)
         
-        print("\n\n✅ --- Model Error Analysis Complete ---")
+        print("\n\n --- Model Error Analysis Complete ---")
         print(f"All plots have been saved to: {FIGURES_OUTPUT_DIR}")
     else:
         print("\n--- Analysis Skipped: `analysis_df` was not created due to an earlier error. ---")

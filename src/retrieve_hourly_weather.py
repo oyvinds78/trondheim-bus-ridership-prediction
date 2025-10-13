@@ -1,11 +1,12 @@
-import os
+
+# Imports
 import requests
 import pandas as pd
 import argparse
 from pathlib import Path
 from dotenv import load_dotenv
 
-# --- 1. CONFIGURATION AND AUTHENTICATION (IMPROVED) ---
+# --- 1. CONFIGURATION AND AUTHENTICATION ---
 
 # Set up argument parser to accept CLIENTID from the command line
 parser = argparse.ArgumentParser(description="Retrieve hourly weather data from the Frost API.")
@@ -56,13 +57,13 @@ try:
     r.raise_for_status() # This will raise an exception for bad status codes (4xx or 5xx)
     json_data = r.json()
 except requests.exceptions.RequestException as e:
-    print(f"❌ API Request Failed: {e}")
+    print(f" API Request Failed: {e}")
     exit()
 
 # --- 4. DATA VALIDATION AND PROCESSING ---
 data = json_data.get('data', [])
 if not data:
-    print("⚠️ Warning: API request was successful but returned no data.")
+    print(" Warning: API request was successful but returned no data.")
     exit()
 
 print(f"✅ Data retrieved successfully! Total records: {len(data)}")
@@ -126,7 +127,7 @@ except NameError:
     # Fallback for interactive environments
     PROJECT_ROOT = Path.cwd().parent
 
-OUTPUT_DIR = PROJECT_ROOT / 'Data' / 'raw' / 'weather'
+OUTPUT_DIR = PROJECT_ROOT / 'Data' / 'weather'
 OUTPUT_FILENAME = 'weather_data_2024.csv'
 full_path = OUTPUT_DIR / OUTPUT_FILENAME
 

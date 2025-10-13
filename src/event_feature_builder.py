@@ -1,10 +1,11 @@
+# IMPORTS
 import os
 import json
 import pandas as pd
 from datetime import timedelta
 from pathlib import Path
 
-# Configuration
+# --- CONFIGURATION---
 # Defining the year to generate features for.
 YEAR = 2024
 
