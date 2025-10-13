@@ -140,7 +140,7 @@ cython_debug/
 *.log
 
 # Reports
-/reports/
+
 
 # Visualizations
 /Visualizations/
