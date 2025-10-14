@@ -55,7 +55,7 @@ print(f"Training set (until 2024-09-30): {len(train_df):,} records")
 print(f"Holdout set (after 2024-09-30):  {len(holdout_df):,} records")
 
 # --- 4. DEFINE FINAL MODEL AND FEATURES ---
-# These are the optimal parameters discovered during hyperparameter tuning.
+# These are the optimal parameters from the best performing feature engineered model (MAE: 1.38).
 best_params = {
     'n_estimators': 150,
     'max_depth': 18,
