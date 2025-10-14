@@ -6,32 +6,30 @@ import gdown
 
 def download_data():
     """
-    Downloads data from Google Drive if it doesn't already exist.
+    Downloads all necessary data from Google Drive if it doesn't already exist.
     """
-    output_folder = 'Data/atb_data/2024'
-    if not os.path.exists(output_folder):
-        os.makedirs(output_folder)
-
-    # URL of the public Google Drive folder
-    folder_url = "https://drive.google.com/drive/folders/1HufdGE0mBCMklXfOiKGSUPEqGYPQW_bW?usp=sharing"
-
-    print("Checking for raw data files...")
+    # --- 1. Download Weather Data ---
+    weather_file_path = 'Data/weather/weather_data_2024.csv'
+    weather_dir = 'Data/weather'
     
-    # Get list of files already in the output folder
-    existing_files = os.listdir(output_folder)
-    
-    # Get list of files in the google drive folder
-    files = gdown.list_files(folder_url)
+    if not os.path.exists(weather_dir):
+        os.makedirs(weather_dir)
 
-    for file in files:
-        file_path = os.path.join(output_folder, file['name'])
-        if file['name'] not in existing_files:
-            print(f"Downloading {file['name']}...")
-            gdown.download(id=file['id'], output=file_path, quiet=False)
-        else:
-            print(f"Found {file['name']} locally.")
+    if not os.path.exists(weather_file_path):
+        print("Downloading weather data...")
+        weather_url = 'https://drive.google.com/uc?id=1zaigqqX3QkUE5Z9Xy7qfK4UT5ShBErTS'
+        gdown.download(url=weather_url, output=weather_file_path, quiet=False)
+    else:
+        print("Weather data already exists locally.")
 
-    print("Data download check complete.")
+    # --- 2. Download Bus Ridership Data ---
+    print("\nChecking for raw bus ridership files...")
+    atb_folder_url = "https://drive.google.com/drive/folders/1HufdGE0mBCMklXfOiKGSUPEqGYPQW_bW?usp=sharing"
+    atb_output_folder = 'Data/atb_data/2024'
+    # gdown.download_folder will create the output folder and skip existing files
+    gdown.download_folder(url=atb_folder_url, output=atb_output_folder, quiet=False, use_cookies=False)
+
+    print("\nData download check complete.")
 
 if __name__ == '__main__':
     download_data()
