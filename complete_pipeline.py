@@ -297,8 +297,13 @@ class BusRidershipPipeline:
         
         logger.info("="*40)
 
+from src.download_data import download_data
+
 def main():
     """Main execution function"""
+    # First, ensure data is available
+    download_data()
+
     import argparse
     
     parser = argparse.ArgumentParser(description='Bus Ridership ML Pipeline')

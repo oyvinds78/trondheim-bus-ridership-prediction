@@ -53,20 +53,34 @@ This is a comprehensive machine learning project for predicting bus ridership in
 
 ## Quick Start
 
-# Clone repository
-git clone https://github.com/oyvinds78/trondheim-bus-ridership-prediction.git
-cd trondheim-bus-ridership-prediction
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/oyvinds78/trondheim-bus-ridership-prediction.git
+   cd trondheim-bus-ridership-prediction
+   ```
 
-# Create virtual environment
-python -m venv venv
-venv\Scripts\activate  # On Windows
-source venv/bin/activate  # On Linux/Mac
+2. **Create and activate a virtual environment**
+   ```sh
+   # Create the environment
+   python -m venv venv
+   
+   # Activate it
+   # On Windows:
+   venv\Scripts\activate
+   # On macOS/Linux:
+   source venv/bin/activate
+   ```
 
-# Install dependencies
-pip install -r requirements.txt
+3. **Install dependencies**
+   ```sh
+   pip install -r requirements.txt
+   ```
 
-# Validate setup
-python complete_pipeline.py --check-status
+4. **Run the pipeline**
+   ```sh
+   python complete_pipeline.py
+   ```
+   The first time you run this, it will automatically download the required raw data files (approx. 1.7 GB). Subsequent runs will use the local data.
 
 ### Complete Pipeline
 
@@ -138,15 +152,14 @@ python src/business_impact_analysis.py
 
 ### Data Structure
 
-## Input Data Sources
-# ATB Ridership Data:
+#### Input Data Sources
 
--Location: Data/atb_data/2024/
--Format: Monthly CSV files named {MM} 2024.csv (e.g., "01 2024.csv")
--Contains: Hourly ridership with boarding/alighting passengers per stop
--Coverage: Full year 2024 (12 files required)
+**ATB Ridership Data:**
+- **Note:** These files are not included in the repository and will be downloaded automatically into the `data/raw/` directory the first time you run the pipeline.
+- **Format:** Monthly CSV files named `{MM} 2024.csv` (e.g., "01 2024.csv").
+- **Contains:** Hourly ridership with boarding/alighting passengers per stop.
 
-# Weather Data:
+**Weather Data:**
 
 -Source: Norwegian Meteorological Institute (frost.met.no)
 -Requires: Valid API credentials in config/config.json
@@ -257,11 +270,7 @@ requests>=2.31.0
 
 ### Common Issues and Solutions
 
-## Pipeline Validation Failures
--Issue: "monthly_csvs: 0/12 files" appears during status check
-
--Solution: Verify filename format exactly matches {MM} 2024.csv with leading zero
-Example: "01 2024.csv" not "1 2024.csv"
+**Pipeline Validation Failures**
 
 -Issue: Missing weather data
 
