@@ -8,7 +8,7 @@ for bus ridership prediction in Trondheim.
 """
 # Import libraries
 import sys
-import time
+import tim
 import logging
 import subprocess
 from pathlib import Path

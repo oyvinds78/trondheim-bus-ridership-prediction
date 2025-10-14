@@ -24,10 +24,16 @@ def download_data():
 
     # --- 2. Download Bus Ridership Data ---
     print("\nChecking for raw bus ridership files...")
-    atb_folder_url = "https://drive.google.com/drive/folders/1HufdGE0mBCMklXfOiKGSUPEqGYPQW_bW?usp=sharing"
     atb_output_folder = 'Data/atb_data/2024'
-    # gdown.download_folder will create the output folder and skip existing files
-    gdown.download_folder(url=atb_folder_url, output=atb_output_folder, quiet=False, use_cookies=False)
+    
+    # Check if ATB data already exists
+    if os.path.exists(atb_output_folder) and os.listdir(atb_output_folder):
+        print("ATB bus ridership data already exists locally.")
+    else:
+        print("Downloading ATB bus ridership data...")
+        atb_folder_url = "https://drive.google.com/drive/folders/1HufdGE0mBCMklXfOiKGSUPEqGYPQW_bW?usp=sharing"
+        # gdown.download_folder will create the output folder and skip existing files
+        gdown.download_folder(url=atb_folder_url, output=atb_output_folder, quiet=False, use_cookies=False)
 
     print("\nData download check complete.")
 
