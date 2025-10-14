@@ -17,7 +17,7 @@ def download_data():
 
     if not os.path.exists(weather_file_path):
         print("Downloading weather data...")
-        weather_url = 'https://drive.google.com/uc?id=1zaigqqX3QkUE5Z9Xy7qfK4UT5ShBErTS'
+        weather_url = 'https://drive.google.com/uc?id=1KDI-4rOBgRRemY8xTQ0vHkKQVXAjomKK'
         gdown.download(url=weather_url, output=weather_file_path, quiet=False)
     else:
         print("Weather data already exists locally.")
