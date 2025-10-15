@@ -82,9 +82,9 @@ This is a comprehensive machine learning project for predicting bus ridership in
    ```
    The first time you run this, it will automatically download the required raw data files (approx. 1.7 GB). Subsequent runs will use the local data.
 
-   ## 🎮 Interactive Demo
+   ## Interactive Demo
 
-  Experience the model's capabilities with our interactive Jupyter notebook:
+  Experience the model's capabilities with my interactive Jupyter notebook:
 
   ```bash
   # Launch Jupyter notebook
@@ -284,12 +284,16 @@ Python Version
 -Tested on Python 3.13.1
 
 ### Dependencies
-scikit-learn==1.7.2
-pandas>=2.0.0
-numpy>=1.24.0
-matplotlib>=3.7.0
-joblib>=1.3.0
-requests>=2.31.0
+pandas==2.1.4
+numpy==1.26.4
+matplotlib==3.7.5
+seaborn==0.13.2
+scipy==1.11.4
+scikit-learn==1.4.2
+joblib==1.3.2
+requests==2.32.4
+python-dotenv==1.1.1
+gdown==4.7.3
 
 # pip install -r requirements.txt
 
@@ -334,7 +338,6 @@ The model captures complex relationships between ridership patterns and external
 
 Potential enhancements for production deployment:
 
--Add baseline model comparison metrics
 -Implement real-time prediction API
 -Expand to multi-step forecasting (predict next 3-6 hours)
 -Incorporate additional features (weather forecasts, road conditions)
