@@ -82,6 +82,31 @@ This is a comprehensive machine learning project for predicting bus ridership in
    ```
    The first time you run this, it will automatically download the required raw data files (approx. 1.7 GB). Subsequent runs will use the local data.
 
+   ## 🎮 Interactive Demo
+
+  Experience the model's capabilities with our interactive Jupyter notebook:
+
+  ```bash
+  # Launch Jupyter notebook
+  jupyter notebook notebooks/interactive_demo.ipynb
+
+  Demo Features:
+  - Real-time Predictions - Adjust route, time, weather, and events to see instant predictions
+  - Weather Impact Analysis - Explore how temperature and precipitation affect ridership
+  - Event Scenarios - Compare normal days vs RBK games and semester periods
+  - Route Performance - Analyze model accuracy across different bus routes
+  - Feature Importance - Understand what factors drive predictions
+  - Scenario Comparison - Compare multiple real-world scenarios side-by-side
+
+  The demo requires the trained model and processed data. Run the complete pipeline first to generate these
+  files.
+
+  Example Use Cases:
+  - Planning for weather events (storms, heat waves)
+  - Preparing for RBK home games
+  - Optimizing schedules during student semester breaks
+  - Comparing ridership patterns across routes
+
 ### Complete Pipeline
 
 ## Running the full pipeline
