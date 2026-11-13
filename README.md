@@ -8,10 +8,12 @@ Public transport operators face the challenge of balancing service quality with 
 **Tech Stack**: Python • Random Forest • Scikit-learn • Pandas • Frost API
 
 ## Model Performance
-Mean Absolute Error (MAE): 1.40 passengers per hour per stop
-RMSE: 2.59 passengers per hour
-R² Score: 0.50 (explains 50% of ridership variance)
-Training Data: 4.2M+ hourly ridership records from ATB (2024)
+Evaluated on a chronological hold-out set (October–December 2024), trained on January–September 2024:
+
+- Mean Absolute Error (MAE): 1.38 passengers per hour per stop
+- RMSE: 2.59 passengers per hour
+- R² Score: 0.51 (explains 51% of ridership variance)
+- Dataset: 18.7M hourly ridership records from AtB (full year 2024), of which ~4.2M in the hold-out set
 
 ![Model Performance](reports/figures/actual_vs_predicted.png)
 
@@ -33,7 +35,7 @@ The model captures approximately half of the patterns in bus ridership, with pre
 -Does not capture all sources of ridership variation
 
 ## Baseline Comparison
-The model represents a meaningful improvement over naive baseline approaches:
+The final model improves MAE by 13.75% over a baseline Random Forest without lag/rolling features (1.60 → 1.38, 6-fold time-series cross-validation). It also integrates information that naive approaches lack:
 
 -Simple hourly averages fail to capture day-to-day variation
 -Rolling averages cannot anticipate special events
